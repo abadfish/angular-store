@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    @item.uploads.build()
+
   end
 
   def create
@@ -65,7 +65,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:product, :inventory, :price, :description, :category_name, :uploads => [])
+    params.require(:item).permit(:name)
   end
 
 

@@ -1,7 +1,6 @@
 class Item < ApplicationRecord
   belongs_to :category
   has_many :line_items
-  has_many :uploads
 
   def self.available_items
     where("inventory > 0")
